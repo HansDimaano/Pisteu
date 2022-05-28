@@ -1,0 +1,2097 @@
+
+/* FIXED THE COMMENTS HERE IN CSS (Please don't watch sass) */
+
+
+/* 
+
+Import the following fonts:
+
+font-family: 'Anonymous Pro', monospace;
+font-family: 'Iceberg', cursive;
+font-family: 'Iceland', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Risque', cursive;
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400&family=Iceberg&family=Iceland&family=Inter:wght@400;600;900&family=Kaushan+Script&family=Risque&display=swap");
+
+/* Import the Reveal Animation CSS */
+@import url("RevealAnimation.css");
+
+/* Set box-sizing of all items to border-box */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*======================================================================================================*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* BODY */
+body {
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #050D37;
+  font-family: 'Inter', sans-serif;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*======================================================================================================*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* HEADER */
+header {
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+  background-color: #050D37;
+
+  /* used the spaceAround_items mixin for making the items space around in div */
+  /* set display to flex to make use of align items and justify content */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  /* use align items to center the items and justify content to space around the items */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+
+  /* used the media_query mixin for creating the media query for 401PX to 575PX in header */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+  /* used the media_query mixin for creating the media query for 0PX to 400PX in header */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+}
+
+/* PISTEU LOGO */
+header img {
+  height: 80%;
+  margin-right: 30px;
+}
+
+/* HEADER NAVIGATION CONTAINER */
+header .header_navigation {
+  min-width: 40%;
+
+  /* used the center_items mixin for making the items space around in div */
+  /* set display to flex to make use of align items and justify content */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  /* use align items to center the items and justify content to space around the items */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/* HEADER NAVIGATION LINKS */
+header .header_navigation a {
+  color: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  white-space: nowrap;
+  font-size: 14px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-radius: 10px;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+/* HEADER NAVIGATION LINKS HOVER */
+header .header_navigation a:hover {
+  cursor: pointer;
+  color: #8ECECF;
+  border-top: 2px solid #6F3096;
+  border-bottom: 2px solid #6F3096;
+  border-radius: 0;
+}
+
+/* used the media_query mixin for creating the media query for 576PX to 950PX in header navigation */
+/* require min-width and max-width */
+@media screen and (min-width: 576px) and (max-width: 950px) {
+
+  /* HEADER NAVIGATION LINKS */
+  header .header_navigation a {
+    font-size: 12px;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 401PX to 575PX in header navigation */
+/* require min-width and max-width */
+@media screen and (min-width: 401px) and (max-width: 575px) {
+
+  /* HEADER NAVIGATION LINKS */
+  header .header_navigation a {
+    font-size: 11px;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 0PX to 400PX in header navigation */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 400px) {
+
+  /* HEADER NAVIGATION LINKS */
+  header .header_navigation a {
+    width: 100%;
+    margin: 15px 0;
+    text-align: center;
+    font-size: 10px;
+    padding: 15px auto;
+    border-top: 2px solid #6F3096;
+    border-bottom: 2px solid #6F3096;
+    border-radius: 0;
+  }
+}
+
+/* HEADER NAVIGATION ACTIVE LINK */
+header .header_navigation a.active_Header {
+  background-color: #6F3096;
+}
+
+/* HEADER NAVIGATION ACTIVE LINK HOVER */
+header .header_navigation a.active_Header:hover {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-radius: 10px;
+}
+
+/* used the media_query mixin for creating the media query for 401PX to 575PX in header navigation */
+/* require min-width and max-width */
+@media screen and (min-width: 401px) and (max-width: 575px) {
+
+  /* HEADER */
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+
+  /* PISTEU LOGO */
+  header img {
+    width: 40%;
+    height: auto;
+    margin: 20px auto 30px auto;
+  }
+
+  /* HEADER NAVIGATION CONTAINER */
+  header .header_navigation {
+    width: 90%;
+    margin: 0 -10px 20px 0;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 0PX to 400PX in header navigation */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 400px) {
+
+  /* HEADER */
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+
+  /* PISTEU LOGO */
+  header img {
+    width: 60%;
+    height: auto;
+    margin: 20px auto 30px auto;
+  }
+
+  /* HEADER NAVIGATION CONTAINER */
+  header .header_navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*======================================================================================================*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* SLIDER CONTAINER */
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-color: #050D37;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*======================================================================================================*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* SLIDE CONTAINER */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: circle(0% at 0 50%);
+          clip-path: circle(0% at 0 50%);
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+/* ACTIVE SLIDE CONTAINER */
+.slide.active {
+  -webkit-clip-path: circle(150% at 0 50%);
+          clip-path: circle(150% at 0 50%);
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-property: -webkit-clip-path;
+  transition-property: -webkit-clip-path;
+  transition-property: clip-path;
+  transition-property: clip-path, -webkit-clip-path;
+}
+
+/* SLIDE IMG */
+.slide img {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right bottom;
+     object-position: right bottom;
+}
+
+/* SLIDE INFO CONTAINER */
+.slide .info {
+  width: 70%;
+  padding: 0 0 50px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 2;
+}
+
+/* INFO TITLE */
+.slide .info h2 {
+  color: white;
+  font-size: 96px;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+/* INFO DESCRIPTION */
+.slide .info p {
+  width: 80%;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 39px;
+  margin: 20px 0;
+}
+
+/* INFO LINK */
+.slide .info a {
+  color: white;
+  font-size: 14px;
+  margin-top: 20px;
+  padding: 20px 90px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+/* INFO LINK HOVER */
+.slide .info a:hover {
+  cursor: pointer;
+  background-color: #050D37;
+}
+
+/* used the media_query mixin for creating the media query for 551PX to 900PX in slide info */
+/* require min-width and max-width */
+@media screen and (min-width: 551px) and (max-width: 900px) {
+
+  /* SLIDE INFO */
+  .slide .info {
+    width: 80%;
+  }
+
+  /* INFO TITLE */
+  .slide .info h2 {
+    font-size: 75px;
+  }
+
+  /* INFO DESCRIPTION */
+  .slide .info p {
+    font-size: 25px;
+  }
+
+  /* INFO LINK */
+  .slide .info a {
+    padding: 20px 60px;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 351PX to 550PX in slide info */
+/* require min-width and max-width */
+@media screen and (min-width: 351px) and (max-width: 550px) {
+
+  /* SLIDE INFO */
+  .slide .info {
+    width: 80%;
+  }
+
+  /* INFO TITLE */
+  .slide .info h2 {
+    font-size: 55px;
+  }
+
+  /* INFO DESCRIPTION */
+  .slide .info p {
+    font-size: 20px;
+  }
+
+  /* INFO LINK */
+  .slide .info a {
+    font-size: 12px;
+    padding: 20px 30px;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 0PX to 350PX in slide info */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 350px) {
+
+  /* SLIDE INFO */
+  .slide .info {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    padding-left: 0;
+    /* used the center_items mixin for centering the items in div */
+    /* set display to flex to make use of align items and justify content */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* use align items and justify content to center the items */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  /* INFO TITLE */
+  .slide .info h2 {
+    font-size: 45px;
+    width: 92%;
+  }
+
+  /* INFO DESCRIPTION */
+  .slide .info p {
+    font-size: 17px;
+    width: 92%;
+  }
+
+  /* INFO LINK */
+  .slide .info a {
+    font-size: 11px;
+    padding: 20px 30px;
+  }
+}
+
+
+/* Each loop that iterates all the slide numbers (used to set the bg color, description text color, and link bg color of each slide) */
+/* .slide.slide1 */
+.slide.slide1 {
+  background-color: #3EA9F5;
+  /* set the slide bg color to the corresponding $num value of $slide_bgcolor list */
+}
+
+/* Info Description of .slide1 */
+.slide.slide1 .info p {
+  color: #165254;
+  /* set the info text color to the corresponding $num value of $slideinfo_txtcolor list */
+}
+
+/* Info Link of .slide1 */
+.slide.slide1 .info a {
+  background-color: #165254;
+  /* set the info link bg color to the corresponding $num value of $slideinfo_linkbgcolor list */
+}
+
+
+/* Each loop that iterates all the slide numbers (used to set the bg color, description text color, and link bg color of each slide) */
+/* .slide.slide2 */
+.slide.slide2 {
+  background-color: #F53E3E;
+  /* set the slide bg color to the corresponding $num value of $slide_bgcolor list */
+}
+
+/* Info Description of .slide2 */
+.slide.slide2 .info p {
+  color: #551515;
+  /* set the info text color to the corresponding $num value of $slideinfo_txtcolor list */
+}
+
+/* Info Link of .slide2 */
+.slide.slide2 .info a {
+  background-color: #691A1A;
+  /* set the info link bg color to the corresponding $num value of $slideinfo_linkbgcolor list */
+}
+
+
+/* Each loop that iterates all the slide numbers (used to set the bg color, description text color, and link bg color of each slide) */
+/* .slide.slide3 */
+.slide.slide3 {
+  background-color: #3EF550;
+  /* set the slide bg color to the corresponding $num value of $slide_bgcolor list */
+}
+
+/* Info Description of .slide3 */
+.slide.slide3 .info p {
+  color: #0F4B15;
+  /* set the info text color to the corresponding $num value of $slideinfo_txtcolor list */
+}
+
+/* Info Link of .slide3 */
+.slide.slide3 .info a {
+  background-color: #11401C;
+  /* set the info link bg color to the corresponding $num value of $slideinfo_linkbgcolor list */
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*======================================================================================================*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* NAVIGATION DOT CONTAINER */
+.navigation {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* NAVIGATION DOT BUTTON */
+.navigation .btn {
+  background-color: white;
+  width: 12px;
+  height: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ACTIVE DOT BUTTON */
+.navigation .btn.active {
+  background-color: black;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*======================================================================================================*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* CORE VALUES CONTAINER */
+.core_values {
+  width: 100%;
+  min-height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* EACH CORE VALUE CONTAINER */
+.core_values > * {
+  width: 33.3333%;
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* CORE VALUE TITLE CONTAINER */
+.core_values > * .core_title {
+  min-width: 80%;
+  margin-bottom: 15px;
+
+  /* used the center_items mixin for centering the items in div */
+  /* set display to flex to make use of align items and justify content */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  /* use align items and justify content to center the items */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* CORE VALUE IMAGE */
+.core_values > * .core_title img {
+  width: 30%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 20px;
+  margin-left: -50px;
+}
+
+/* CORE VALUE TITLE TEXT */
+.core_values > * .core_title h2 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: 'Iceberg', cursive;
+  font-size: 40px;
+  letter-spacing: 3px;
+  color: white;
+}
+
+/* used the media_query mixin for creating the media query for 801PX to 1200PX in core title */
+/* require min-width and max-width */
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+
+  /* CORE VALUE TITLE CONTAINER */
+  .core_values > * .core_title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  /* CORE VALUE IMAGE */
+  .core_values > * .core_title img {
+    margin-left: 0;
+  }
+}
+
+/* CORE VALUE DESCRIPTION TEXT */
+.core_values > * p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 0 10%;
+}
+
+/* Each loop that iterates all the core value numbers (used to set the bg color and description text color of each core value) */
+/* .core_values .corevalue_1 */
+.core_values .corevalue_1 {
+  background-color: #6F3096;
+  /* set the core value bg color to the corresponding $num value of $corevalue_bgcolor list */
+  color: #C567FF;
+  /* set the core value bg color to the corresponding $num value of $corevalue_bgcolor list */
+}
+
+
+/* Each loop that iterates all the core value numbers (used to set the bg color and description text color of each core value) */
+/* .core_values .corevalue_2 */
+.core_values .corevalue_2 {
+  background-color: #9567E0;
+  /* set the core value bg color to the corresponding $num value of $corevalue_bgcolor list */
+  color: #3C285C;
+  /* set the core value bg color to the corresponding $num value of $corevalue_bgcolor list */
+}
+
+/* Each loop that iterates all the core value numbers (used to set the bg color and description text color of each core value) */
+/* .core_values .corevalue_3 */
+.core_values .corevalue_3 {
+  background-color: #F7A579;
+  /* set the core value bg color to the corresponding $num value of $corevalue_bgcolor list */
+  color: #694821;
+  /* set the core value bg color to the corresponding $num value of $corevalue_bgcolor list */
+}
+
+
+/* used the media_query mixin for creating the media query for 551PX to 800PX in core values */
+/* require min-width and max-width */
+@media screen and (min-width: 551px) and (max-width: 800px) {
+
+  /* CORE VALUES CONTAINER */
+  .core_values {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  /* EACH CORE VALUE CONTAINER */
+  .core_values > * {
+    width: 50%;
+  }
+
+  /* CORE VALUE TITLE CONTAINER */
+  .core_values > * .core_title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  /* CORE VALUE IMAGE */
+  .core_values > * .core_title img {
+    width: 20%;
+    margin-left: 0;
+  }
+
+  /* CORE VALUE TITLE TEXT */
+  .core_values > * .core_title h2 {
+    font-size: 35px;
+  }
+
+  /* CORE VALUE DESCRIPTION TEXT */
+  .core_values p {
+    font-size: 18px;
+  }
+
+  /* CORE VALUE 3 CONTAINER */
+  .core_values .corevalue_3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 0 to 550PX in core values */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 550px) {
+
+  /* CORE VALUES CONTAINER */
+  .core_values {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  /* EACH CORE VALUE CONTAINER */
+  .core_values > * {
+    width: 100%;
+  }
+
+  /* CORE VALUE TITLE CONTAINER */
+  .core_values > * .core_title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  /* CORE VALUE IMAGE */
+  .core_values > * .core_title img {
+    width: 20%;
+    margin-left: 0;
+  }
+
+  /* CORE VALUE TITLE TEXT */
+  .core_values > * .core_title h2 {
+    font-size: 35px;
+    margin-bottom: 5px;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 0 to 550PX in core value title text */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 550px) and (min-width: 0px) and (max-width: 350px) {
+
+  /* CORE VALUE TITLE TEXT */
+  .core_values > * .core_title h2 {
+    font-size: 25px;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 0 to 550PX in core value description text */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 550px) {
+
+  /* CORE VALUE DESCRIPTION TEXT */
+  .core_values p {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 0 to 350PX in core value description text */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 550px) and (min-width: 0px) and (max-width: 350px) {
+
+  /* CORE VALUE DESCRIPTION TEXT */
+  .core_values p {
+    font-size: 12px;
+    line-height: 30px;
+  }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*======================================================================================================*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* SUBHEADING CONTAINER */
+.subheading {
+  width: 100%;
+  height: 115px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+}
+
+/* SUBHEADING TITLE TEXT */
+.subheading h2 {
+  color: white;
+  font-family: 'Iceland', cursive;
+  font-size: 64px;
+  margin: 0;
+}
+
+/* used the media_query mixin for creating the media query for 451PX to 750PX in subheading title text */
+/* require min-width and max-width */
+@media screen and (min-width: 451px) and (max-width: 750px) {
+
+  /* SUBHEADING TITLE TEXT */
+  .subheading h2 {
+    font-size: 50px;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 351PX to 450PX in subheading title text */
+/* require min-width and max-width */
+@media screen and (min-width: 351px) and (max-width: 450px) {
+
+  /* SUBHEADING TITLE TEXT */
+  .subheading h2 {
+    font-size: 40px;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 0PX to 350PX in subheading title text */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 350px) {
+
+  /* SUBHEADING TITLE TEXT */
+  .subheading h2 {
+    font-size: 35px;
+  }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*======================================================================================================*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* DESIGN CONTAINER */
+.design_container {
+  background: #050D37 url("../2 - Images/content_bg.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  padding: 175px 0 100px 0;
+
+  /* used the center_items mixin for centering items in div */
+  /* set display to flex to make use of align items and justify content */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  /* use align items and justify content to center the items */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* DESIGN SUBHEADING */
+.design_container .subheading {
+  background: #120D37;
+}
+
+/* ROBOT IMAGE */
+.design_container img.robot {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 15%;
+  z-index: 2;
+}
+
+/* used the media_query mixin for creating the media query for 0PX to 600PX in robot image */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 600px) {
+
+  /* ROBOT IMAGE */
+  .design_container img.robot {
+    top: 100px;
+  }
+}
+
+/* DESIGN CONTENT CONTAINER */
+.design_container .design_content {
+  width: 90%;
+}
+
+/* BOTH QUOTE CONTAINER*/
+.design_container .design_content > * {
+  width: 95%;
+  position: relative;
+  border-radius: 30px;
+
+  /* used the center_items mixin for centering items in div */
+  /* set display to flex to make use of align items and justify content */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  /* use align items and justify content to center the items */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* WHITE LINE DIV*/
+.design_container .design_content > * .white_line {
+  width: 90%;
+  height: 5px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0;
+  background-color: white;
+}
+
+/* QUOTE TEXT CONTAINER */
+.design_container .design_content > * .quote_text {
+  width: 45%;
+}
+
+/* QUOTE TEXT */
+.design_container .design_content > * .quote_text h3 {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 32px;
+  font-style: italic;
+  line-height: 50px;
+  letter-spacing: 7px;
+}
+
+/* AUTHOR NAME TEXT */
+.design_container .design_content > * .quote_text h5 {
+  font-family: 'Risque', cursive;
+  font-size: 25px;
+  line-height: 40px;
+  letter-spacing: 5px;
+  text-align: right;
+}
+
+/* used the media_query mixin for creating the media query for 376PX to 850PX in quote text */
+/* require min-width and max-width */
+@media screen and (min-width: 376px) and (max-width: 850px) {
+
+  /* QUOTE TEXT CONTAINER */
+  .design_container .design_content > * .quote_text {
+    margin-right: 2%;
+  }
+
+  /* QUOTE TEXT */
+  .design_container .design_content > * .quote_text h3 {
+    font-size: 25px;
+  }
+
+  /* AUTHOR NAME TEXT */
+  .design_container .design_content > * .quote_text h5 {
+    font-size: 22px;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 0PX to 375PX in quote text */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 375px) {
+
+  /* QUOTE TEXT CONTAINER */
+  .design_container .design_content > * .quote_text {
+    margin-right: 2%;
+  }
+
+  /* QUOTE TEXT */
+  .design_container .design_content > * .quote_text h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* AUTHOR NAME TEXT */
+  .design_container .design_content > * .quote_text h5 {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+/* QUOTE IMAGE */
+.design_container .design_content > * img {
+  width: 40%;
+}
+
+/* FIRST QUOTE CONTAINER */
+.design_container .design_content .first_quote {
+  margin-left: 5%;
+  background-color: #884DA6;
+}
+
+/* FIRST QUOTE TEXT CONTAINER AND QUOTE IMAGE */
+.design_container .design_content .first_quote .quote_text, .design_container .design_content .first_quote img {
+  margin: 75px auto 100px auto;
+}
+
+/* FIRST QUOTE WHITE LINE */
+.design_container .design_content .first_quote .white_line {
+  top: 30px;
+}
+
+/* FIRST QUOTE TEXT */
+.design_container .design_content .first_quote .quote_text h3, .design_container .design_content .first_quote .quote_text h5 {
+  color: #151544;
+}
+
+/* SECOND QUOTE CONTAINER */
+.design_container .design_content .second_quote {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-right: 5%;
+  margin-top: -50px;
+  background-color: #151544;
+}
+
+/* SECOND QUOTE TEXT CONTAINER AND QUOTE IMAGE */
+.design_container .design_content .second_quote .quote_text, .design_container .design_content .second_quote img {
+  margin: 50px auto 100px auto;
+}
+
+/* SECOND QUOTE WHITE LINE */
+.design_container .design_content .second_quote .white_line {
+  bottom: 30px;
+}
+
+/* SECOND QUOTE TEXT */
+.design_container .design_content .second_quote .quote_text h3, .design_container .design_content .second_quote .quote_text h5 {
+  color: #884DA6;
+}
+
+/* used the media_query mixin for creating the media query for 376PX to 900PX in design */
+/* require min-width and max-width */
+@media screen and (min-width: 376px) and (max-width: 900px) {
+  .design_container .design_content {
+    width: 90%;
+  }
+
+  /* BOTH QUOTE CONTAINER*/
+  .design_container .design_content > * {
+    width: 95%;
+  }
+
+  /* QUOTE TEXT CONTAINER */
+  .design_container .design_content > * .quote_text {
+    width: 85%;
+    margin-right: 3%;
+  }
+
+  /* QUOTE IMAGE */
+  .design_container .design_content > * img {
+    width: 70%;
+  }
+}
+
+
+/* used the media_query mixin for creating the media query for 0PX to 450PX in quote image */
+/* require min-width and max-width */
+@media screen and (min-width: 376px) and (max-width: 900px) and (min-width: 0px) and (max-width: 450px) {
+
+  /* QUOTE IMAGE */
+  .design_container .design_content > * img {
+    width: 90%;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 376PX to 900PX in design */
+/* require min-width and max-width */
+@media screen and (min-width: 376px) and (max-width: 900px) {
+
+  /* FIRST QUOTE TEXT CONTAINER */
+  .design_container .design_content .first_quote {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  /* FIRST QUOTE TEXT */
+  .design_container .design_content .first_quote .quote_text {
+    margin: 30px auto 50px auto;
+  }
+
+  /* QUOTE IMAGE */
+  .design_container .design_content .first_quote img {
+    margin: 75px auto 0px auto;
+  }
+
+  /* FIRST QUOTE WHITE LINE */
+  .design_container .design_content .first_quote .white_line {
+    top: 30px;
+  }
+
+  /* FIRST QUOTE TEXT */
+  .design_container .design_content .first_quote .quote_text h3, .design_container .design_content .first_quote .quote_text h5 {
+    color: #151544;
+  }
+
+  /* SECOND QUOTE TEXT CONTAINER */
+  .design_container .design_content .second_quote {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  /* SECOND QUOTE TEXT */
+  .design_container .design_content .second_quote .quote_text {
+    margin: 50px auto 50px auto;
+  }
+
+  /* QUOTE IMAGE */
+  .design_container .design_content .second_quote img {
+    margin: 50px auto 0px auto;
+  }
+
+  /* SECOND QUOTE WHITE LINE */
+  .design_container .design_content .second_quote .white_line {
+    bottom: 30px;
+  }
+
+  /* SECOND QUOTE TEXT */
+  .design_container .design_content .second_quote .quote_text h3, .design_container .design_content .second_quote .quote_text h5 {
+    color: #884DA6;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 0PX to 375PX in slide */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 375px) {
+
+  /* DESIGN CONTENT CONTAINER*/
+  .design_container .design_content {
+    width: 90%;
+  }
+
+  /* BOTH QUOTE CONTAINER*/
+  .design_container .design_content > * {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  /* QUOTE TEXT CONTAINER */
+  .design_container .design_content > * .quote_text {
+    width: 90%;
+  }
+
+  /* QUOTE IMAGE */
+  .design_container .design_content > * img {
+    width: 95%;
+  }
+
+  /* FIRST QUOTE CONTAINER */
+  .design_container .design_content .first_quote {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-left: 0;
+  }
+
+  /* FIRST QUOTE TEXT CONTAINER */
+  .design_container .design_content .first_quote .quote_text {
+    margin: 30px auto 50px auto;
+  }
+
+  /* QUOTE IMAGE */
+  .design_container .design_content .first_quote img {
+    margin: 75px auto 0px auto;
+  }
+
+  /* FIRST QUOTE WHITE LINE */
+  .design_container .design_content .first_quote .white_line {
+    top: 30px;
+  }
+
+  /* FIRST QUOTE TEXT */
+  .design_container .design_content .first_quote .quote_text h3, .design_container .design_content .first_quote .quote_text h5 {
+    color: #151544;
+  }
+
+  /* SECOND QUOTE CONTAINER */
+  .design_container .design_content .second_quote {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-right: 0;
+  }
+
+  /* SECOND QUOTE TEXT CONTAINER */
+  .design_container .design_content .second_quote .quote_text {
+    margin: 50px auto 50px auto;
+  }
+
+  /* QUOTE IMAGE */
+  .design_container .design_content .second_quote img {
+    margin: 50px auto 0px auto;
+  }
+
+  /* SECOND QUOTE WHITE LINE */
+  .design_container .design_content .second_quote .white_line {
+    bottom: 30px;
+  }
+
+  /* SECOND QUOTE TEXT */
+  .design_container .design_content .second_quote .quote_text h3, .design_container .design_content .second_quote .quote_text h5 {
+    color: #884DA6;
+  }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*======================================================================================================*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* PISTEU ARTWORKS CONTAINER */
+.artworks_container {
+  width: 100%;
+  position: relative;
+  background-color: #050D37;
+
+  /* used the center_items mixin for centering items in div */
+  /* set display to flex to make use of align items and justify content */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  /* use align items and justify content to center the items */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* ARTWORKS SUBHEADING */
+.artworks_container .subheading {
+  background-color: #6F3096;
+}
+
+/* ARTWORKS CONTAINER */
+.artworks_container .artworks {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 115px;
+}
+
+/* EACH ARTWORK DIV */
+.artworks_container .artworks > * {
+  width: 33.33%;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  overflow-y: hidden;
+}
+
+/* BLUR DIV */
+.artworks_container .artworks > * .blur {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+/* CAPTION CONTAINER */
+.artworks_container .artworks > * .caption {
+  color: white;
+  width: 100%;
+  padding: 20px 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+
+  /* used the center_items mixin for centering items in div */
+  /* set display to flex to make use of align items and justify content */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  /* use align items and justify content to center the items */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* ARTWORK TITLE TEXT */
+.artworks_container .artworks > * .caption h3 {
+  font-family: 'Iceland', cursive;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 4px;
+  margin: 10px 0;
+}
+
+/* ARTIST TEXT */
+.artworks_container .artworks > * .caption h5 {
+  font-family: 'Anonymous Pro', sans-serif;
+  font-size: 17px;
+  letter-spacing: 4px;
+}
+
+/* EACH ARTWORK DIV HOVER */
+.artworks_container .artworks > *:hover {
+  background-position: bottom center;
+}
+
+/* BLUR DIV WHEN ARTWORK DIV IS HOVERED */
+.artworks_container .artworks > *:hover .blur {
+  display: block;
+}
+
+/* CAPTION CONTAINER WHEN ARTWORK DIV IS HOVERED */
+.artworks_container .artworks > *:hover .caption {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+/* Each loop that iterates all the artworks numbers (used to set the bg color and description text color of each core value) */
+/* .artworks .artwork1 */
+.artworks_container .artworks .artwork1 {
+  background: url("../2 - Images/artwork_1.gif") no-repeat center center;
+  /* set the bg image for the corresponding artwork to the artwork_{num value}.gif */
+  background-size: cover;
+  /* set the background size to cover */
+}
+
+/* Caption Container of .artwork1 */
+.artworks_container .artworks .artwork1 .caption {
+  background-color: #C540C4;
+  /* set the artwork caption bg color to the corresponding $num value of $artworkcaption_bgcolor list */
+}
+
+
+/* Each loop that iterates all the artworks numbers (used to set the bg color and description text color of each core value) */
+/* .artworks .artwork2 */
+.artworks_container .artworks .artwork2 {
+  background: url("../2 - Images/artwork_2.gif") no-repeat center center;
+  /* set the bg image for the corresponding artwork to the artwork_{num value}.gif */
+  background-size: cover;
+  /* set the background size to cover */
+}
+
+/* Caption Container of .artwork2 */
+.artworks_container .artworks .artwork2 .caption {
+  background-color: #717171;
+  /* set the artwork caption bg color to the corresponding $num value of $artworkcaption_bgcolor list */
+}
+
+/* Each loop that iterates all the artworks numbers (used to set the bg color and description text color of each core value) */
+/* .artworks .artwork3 */
+.artworks_container .artworks .artwork3 {
+  background: url("../2 - Images/artwork_3.gif") no-repeat center center;
+  /* set the bg image for the corresponding artwork to the artwork_{num value}.gif */
+  background-size: cover;
+  /* set the background size to cover */
+}
+
+/* Caption Container of .artwork3 */
+.artworks_container .artworks .artwork3 .caption {
+  background-color: #B44D45;
+  /* set the artwork caption bg color to the corresponding $num value of $artworkcaption_bgcolor list */
+}
+
+/* Each loop that iterates all the artworks numbers (used to set the bg color and description text color of each core value) */
+/* .artworks .artwork4 */
+.artworks_container .artworks .artwork4 {
+  background: url("../2 - Images/artwork_4.gif") no-repeat center center;
+  /* set the bg image for the corresponding artwork to the artwork_{num value}.gif */
+  background-size: cover;
+  /* set the background size to cover */
+}
+
+/* Caption Container of .artwork4 */
+.artworks_container .artworks .artwork4 .caption {
+  background-color: #00121C;
+  /* set the artwork caption bg color to the corresponding $num value of $artworkcaption_bgcolor list */
+}
+
+/* Each loop that iterates all the artworks numbers (used to set the bg color and description text color of each core value) */
+/* .artworks .artwork5 */
+.artworks_container .artworks .artwork5 {
+  background: url("../2 - Images/artwork_5.gif") no-repeat center center;
+  /* set the bg image for the corresponding artwork to the artwork_{num value}.gif */
+  background-size: cover;
+  /* set the background size to cover */
+}
+
+/* Caption Container of .artwork5 */
+.artworks_container .artworks .artwork5 .caption {
+  background-color: #C61700;
+  /* set the artwork caption bg color to the corresponding $num value of $artworkcaption_bgcolor list */
+}
+
+/* Each loop that iterates all the artworks numbers (used to set the bg color and description text color of each core value) */
+/* .artworks .artwork6 */
+.artworks_container .artworks .artwork6 {
+  background: url("../2 - Images/artwork_6.gif") no-repeat center center;
+  /* set the bg image for the corresponding artwork to the artwork_{num value}.gif */
+  background-size: cover;
+  /* set the background size to cover */
+}
+
+/* Caption Container of .artwork6 */
+.artworks_container .artworks .artwork6 .caption {
+  background-color: #7C9F95;
+  /* set the artwork caption bg color to the corresponding $num value of $artworkcaption_bgcolor list */
+}
+
+/* used the media_query mixin for creating the media query for 601PX to 800PX in artworks */
+/* require min-width and max-width */
+@media screen and (min-width: 601px) and (max-width: 800px) {
+
+  /* EACH ARTWORK DIV */
+  .artworks_container .artworks > * {
+    width: 50%;
+    background-position: center top !important;
+  }
+
+  /* CAPTION CONTAINER */
+  .artworks_container .artworks > * .caption {
+    opacity: 0.9;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* used the media_query mixin for creating the media query for 0PX to 800PX in artworks */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 600px) {
+
+  /* EACH ARTWORK DIV */
+  .artworks_container .artworks > * {
+    width: 100%;
+    background-position: center top !important;
+  }
+
+  /* CAPTION CONTAINER */
+  .artworks_container .artworks > * .caption {
+    opacity: 0.9;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*======================================================================================================*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* FEEDBACK CONTAINER */
+.feedback_container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  background: #050D37 url("../2 - Images/content_bg.png") no-repeat center center;
+  background-size: cover;
+  padding-bottom: 150px;
+
+  /* used the center_items mixin for centering items in div */
+  /* set display to flex to make use of align items and justify content */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  /* use align items and justify content to center the items */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* FEEDBACK SUBHEADING */
+.feedback_container .subheading {
+  background-color: #06114F;
+}
+
+/* MELANIE CONTAINER */
+.feedback_container .melanie_container {
+  width: 90%;
+  margin-top: 175px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* MELANIE PERKINS IMAGE */
+.feedback_container .melanie_container img {
+  width: 40%;
+  margin-right: 5%;
+}
+
+/* NAME TEXT CONTAINER */
+.feedback_container .melanie_container .name_text {
+  width: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 30px 0;
+  font-family: 'Iceberg', cursive;
+  background-color: rgba(55, 78, 129, 0.6);
+  border: 15px solid #F7A579;
+  border-radius: 10px;
+
+  /* used the center_items mixin for centering items in div */
+  /* set display to flex to make use of align items and justify content */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  /* use align items and justify content to center the items */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* MELANIE NAME TEXT */
+.feedback_container .melanie_container .name_text h2 {
+  color: white;
+  width: 80%;
+  font-size: 96px;
+  line-height: 120px;
+  margin: 0 0 40px 0;
+}
+
+/* MELANIE DESCRIPTION TEXT */
+.feedback_container .melanie_container .name_text h5 {
+  color: #6BE7F9;
+  width: 80%;
+  font-size: 40px;
+  line-height: 50px;
+  margin: 0;
+}
+
+/* used the media_query mixin for creating the media query for 651PX to 950PX in melanie container */
+/* require min-width and max-width */
+@media screen and (min-width: 651px) and (max-width: 950px) {
+
+  /* MELANIE CONTAINER */
+  .feedback_container .melanie_container {
+    width: 95%;
+  }
+
+  /* MELANIE PERKINS IMAGE */
+  .feedback_container .melanie_container img {
+    width: 42%;
+  }
+
+  /* NAME TEXT CONTAINER */
+  .feedback_container .melanie_container .name_text {
+    border-radius: 15px;
+  }
+
+  /* MELANIE NAME TEXT */
+  .feedback_container .melanie_container .name_text h2 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  /* MELANIE DESCRIPTION TEXT */
+  .feedback_container .melanie_container .name_text h5 {
+    font-size: 35px;
+    line-height: 50px;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 551PX to 650PX in melanie container */
+/* require min-width and max-width */
+@media screen and (min-width: 551px) and (max-width: 650px) {
+
+  /* MELANIE CONTAINER */
+  .feedback_container .melanie_container {
+    width: 95%;
+  }
+
+  /* MELANIE PERKINS IMAGE */
+  .feedback_container .melanie_container img {
+    width: 42%;
+  }
+
+  /* NAME TEXT CONTAINER */
+  .feedback_container .melanie_container .name_text {
+    border-radius: 15px;
+  }
+
+  /* MELANIE NAME TEXT */
+  .feedback_container .melanie_container .name_text h2 {
+    font-size: 50px;
+    line-height: 70px;
+  }
+
+  /* MELANIE DESCRIPTION TEXT */
+  .feedback_container .melanie_container .name_text h5 {
+    font-size: 25px;
+    line-height: 50px;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 0PX to 550PX in melanie container */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 550px) {
+
+  /* MELANIE CONTAINER */
+  .feedback_container .melanie_container {
+    width: 95%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 150px;
+  }
+
+  /* MELANIE PERKINS IMAGE */
+  .feedback_container .melanie_container img {
+    width: 60%;
+  }
+
+  /* NAME TEXT CONTAINER */
+  .feedback_container .melanie_container .name_text {
+    border-radius: 15px;
+    width: 80%;
+    margin-top: -100px;
+    padding-top: 100px;
+  }
+
+  /* MELANIE NAME TEXT */
+  .feedback_container .melanie_container .name_text h2 {
+    font-size: 40px;
+    line-height: 70px;
+    margin: 0 0 20px 0;
+  }
+
+  /* MELANIE DESCRIPTION TEXT */
+  .feedback_container .melanie_container .name_text h5 {
+    font-size: 20px;
+    line-height: 50px;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 0PX to 550PX in melanie container */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 550px) and (min-width: 0px) and (max-width: 400px) {
+
+  /* NAME TEXT CONTAINER */
+  .feedback_container .melanie_container .name_text {
+    margin-top: -75px;
+  }
+}
+
+/* FEEDBACK TEXT CONTAINER */
+.feedback_container .feedback_text {
+  width: 90%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  position: relative;
+  margin-top: 70px;
+
+  /* used the center_items mixin for centering items in div */
+  /* set display to flex to make use of align items and justify content */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  /* use align items and justify content to center the items */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* ROBOT IMAGE */
+.feedback_container .feedback_text img {
+  position: absolute;
+  width: 7%;
+  height: auto;
+  left: -30px;
+  bottom: -50px;
+}
+
+/* FEEDBACK TEXT */
+.feedback_container .feedback_text p {
+  font-family: 'Anonymous Pro', sans-serif;
+  font-size: 30px;
+  line-height: 60px;
+  margin: 40px;
+}
+
+/* used the media_query mixin for creating the media query for 751PX to 950PX in feedback container */
+/* require min-width and max-width */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+
+  /* FEEDBACK TEXT CONTAINER */
+  .feedback_container .feedback_text {
+    width: 92%;
+  }
+
+  /* ROBOT IMAGE */
+  .feedback_container .feedback_text img {
+    left: -10px;
+    bottom: -30px;
+  }
+
+  /* FEEDBACK TEXT */
+  .feedback_container .feedback_text p {
+    font-size: 20px;
+    line-height: 50px;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 501PX to 750PX in feedback container */
+/* require min-width and max-width */
+@media screen and (min-width: 501px) and (max-width: 750px) {
+
+  /* FEEDBACK TEXT CONTAINER */
+  .feedback_container .feedback_text {
+    width: 92%;
+  }
+
+  /* ROBOT IMAGE */
+  .feedback_container .feedback_text img {
+    width: 10%;
+    left: -10px;
+    bottom: -30px;
+  }
+
+  /* FEEDBACK TEXT */
+  .feedback_container .feedback_text p {
+    font-size: 20px;
+    line-height: 50px;
+  }
+}
+
+/* used the media_query mixin for creating the media query for 0PX to 500PX in feedback container */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 500px) {
+
+  /* FEEDBACK TEXT CONTAINER */
+  .feedback_container .feedback_text {
+    width: 92%;
+  }
+
+  /* ROBOT IMAGE */
+  .feedback_container .feedback_text img {
+    width: 18%;
+    left: -20px;
+    bottom: -40px;
+  }
+
+  /* FEEDBACK TEXT */
+  .feedback_container .feedback_text p {
+    font-size: 17px;
+    line-height: 40px;
+    margin: 20px 10px;
+  }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*======================================================================================================*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* FOOTER */
+footer {
+  width: 100%;
+  background-color: #06114F;
+  padding: 50px 30px;
+
+  /* used the center_items mixin for centering items in div */
+  /* set display to flex to make use of align items and justify content */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  /* use align items and justify content to center the items */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* PISTEU DESCRIPTION CONTAINER */
+footer .pisteu_desc {
+  width: 35%;
+  margin-right: 5%;
+}
+
+/* PISTEU DESCRIPTION TEXT */
+footer .pisteu_desc p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 35px;
+  margin: 50px 0;
+  color: #8ECECF;
+}
+
+/* CONNECT WITH US CONTAINER */
+footer .connect_with_us {
+  width: 50%;
+  padding: 0 8%;
+  border-left: 1px solid white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: #BA8FFF;
+
+  /* used the center_items mixin for centering items in div */
+  /* set display to flex to make use of align items and justify content */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  /* use align items and justify content to center the items */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* CONNECT WITH US TITLE TEXT */
+footer .connect_with_us h3 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 48px;
+  line-height: 70px;
+  margin: 0 0 30px 0;
+}
+
+/* CONNECT WITH US DESCRIPTION TEXT */
+footer .connect_with_us p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0 0 50px 0;
+}
+
+/* SEND EMAIL FORM */
+footer .connect_with_us form {
+  width: 100%;
+}
+
+/* INPUT SETTINGS */
+footer .connect_with_us input[type=email], footer .connect_with_us input[type=text] {
+  width: 48.5%;
+  padding: 10px 15px;
+  background-color: transparent;
+  color: white;
+  border: 5px solid white;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+/* used the media_query mixin for creating the media query for 0PX to 500PX in input settings */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 500px) {
+
+  /* INPUT SETTINGS */
+  footer .connect_with_us input[type=email], footer .connect_with_us input[type=text] {
+    width: 100%;
+  }
+}
+
+/* EMAIL INPUT */
+footer .connect_with_us input[type=email] {
+  width: 100%;
+}
+
+/* LEFT TEXT INPUT */
+footer .connect_with_us .left_input {
+  float: left;
+}
+
+/* RIGHT TEXT INPUT */
+footer .connect_with_us .right_input {
+  float: right;
+}
+
+/* MESSAGE INPUT */
+footer .connect_with_us textarea {
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  border: 5px solid white;
+  margin-top: 5px;
+  padding: 5px 10px;
+  resize: none;
+  height: 100px;
+  letter-spacing: 2px;
+  line-height: 25px;
+}
+
+/* INPUT PLACEHOLDER SETTINGS */
+footer .connect_with_us input[type=email]::-webkit-input-placeholder, footer .connect_with_us input[type=text]::-webkit-input-placeholder, footer .connect_with_us textarea::-webkit-input-placeholder {
+  color: #BA8FFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+footer .connect_with_us input[type=email]:-ms-input-placeholder, footer .connect_with_us input[type=text]:-ms-input-placeholder, footer .connect_with_us textarea:-ms-input-placeholder {
+  color: #BA8FFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+footer .connect_with_us input[type=email]::-ms-input-placeholder, footer .connect_with_us input[type=text]::-ms-input-placeholder, footer .connect_with_us textarea::-ms-input-placeholder {
+  color: #BA8FFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+footer .connect_with_us input[type=email]::placeholder, footer .connect_with_us input[type=text]::placeholder, footer .connect_with_us textarea::placeholder {
+  color: #BA8FFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* INPUT FOCUS SETTINGS */
+footer .connect_with_us input[type=email]:focus, footer .connect_with_us input[type=text]:focus, footer .connect_with_us textarea:focus {
+  border-color: #8ECECF;
+  outline: none;
+}
+
+/* SEND MESSAGE BUTTON */
+footer .connect_with_us input[type=submit] {
+  color: #06114F;
+  background-color: #BA8FFF;
+  padding: 5px 30px;
+  margin-top: 30px;
+  font-size: 17px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 30px;
+  border: none;
+  float: left;
+}
+
+/* SEND MESSAGE BUTTON HOVER*/
+footer .connect_with_us input[type=submit]:hover {
+  cursor: pointer;
+  background-color: #EFB34C;
+}
+
+/* MESSAGE SENT TEXT (hidden initially) */
+footer .connect_with_us p#message_sent_txt {
+  float: left;
+  margin: 35px 0 0 20px;
+  color: #8ECECF;
+  display: none;
+}
+
+/* MESSAGE SENT TEXT WHEN ACTIVE (shown) */
+footer .connect_with_us p#message_sent_txt.active {
+  display: block;
+}
+
+/* used the media_query mixin for creating the media query for 0PX to 950PX in footer */
+/* require min-width and max-width */
+@media screen and (min-width: 0px) and (max-width: 950px) {
+  
+  /* FOOTER */
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  /* PISTEU DESCRIPTION CONTAINER */
+  footer .pisteu_desc {
+    width: 95%;
+    margin-right: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+
+    /* used the center_items mixin for centering items in div */
+    /* set display to flex to make use of align items and justify content */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    /* use align items and justify content to center the items */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  /* PISTEU DESCRIPTION TEXT */
+  footer .pisteu_desc p {
+    font-size: 17px;
+    margin: 30px 0;
+  }
+
+  /* CONNECT WITH US CONTAINER */
+  footer .connect_with_us {
+    width: 95%;
+    border-left: none;
+    border-top: 1px solid white;
+    padding-top: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    /* used the center_items mixin for centering items in div */
+    /* set display to flex to make use of align items and justify content */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    /* use align items and justify content to center the items */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  /* CONNECT WITH US DESCRIPTION TEXT */
+  footer .connect_with_us p {
+    font-size: 17px;
+  }
+
+  /* INPUT PLACEHOLDER SETTINGS */
+  footer .connect_with_us input[type=email]::-webkit-input-placeholder, footer .connect_with_us input[type=text]::-webkit-input-placeholder, footer .connect_with_us textarea::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+  footer .connect_with_us input[type=email]:-ms-input-placeholder, footer .connect_with_us input[type=text]:-ms-input-placeholder, footer .connect_with_us textarea:-ms-input-placeholder {
+    font-size: 12px;
+  }
+  footer .connect_with_us input[type=email]::-ms-input-placeholder, footer .connect_with_us input[type=text]::-ms-input-placeholder, footer .connect_with_us textarea::-ms-input-placeholder {
+    font-size: 12px;
+  }
+  footer .connect_with_us input[type=email]::placeholder, footer .connect_with_us input[type=text]::placeholder, footer .connect_with_us textarea::placeholder {
+    font-size: 12px;
+  }
+
+  /* SEND MESSAGE BUTTON */
+  footer .connect_with_us input[type=submit] {
+    font-size: 14px;
+  }
+}
+
+
+/*# sourceMappingURL=Pisteu.css.map */

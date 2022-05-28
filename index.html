@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Use the utf-8 character encoding -->
+        <meta charset="UTF-8">
+
+        <!-- Set the viewport to make the website look good on all devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Set the Pisteu icon for the Website -->
+        <link rel="shortcut icon" href="2 - Images/Pisteu_icon.ico" type="image/x-icon">
+        <link rel="icon" href="2 - Images/Pisteu_icon.ico" type="image/x-icon">
+
+        <!-- Link the Home Page CSS -->
+        <link rel="stylesheet" href="1 - CSS/Pisteu.css" type="text/css">
+
+        <!-- Title for the Website -->
+        <title>Pisteu - Home</title>
+    </head>
+    <body>
+
+
+        <!--
+
+            THINGS TO NOTE FOR UNDERSTANDING THE WEBSITE CODE: 
+            
+            
+            -> This project consists only of one page so navigation buttons are not linked.
+
+            -> However, the buttons are still styled with hover settings
+
+            -> This project uses a Slider Feature for the Title Container (done through Slider.js)
+
+            -> This project uses Reveal Animation Feature when scrolling down (done through RevealAnimation.js and RevealAnimation.css)
+
+            -> The RevealAnimation.css is imported in HomePage.css
+
+            -> In order to make the elements have reveal animations, they must have a "reveal [up, down, left, right]" class with them
+
+            -> Only selected elements have reveal animations such as the core values title
+
+            -> This project uses a Send Email Feature in the Footer (done through Send_Email.js)
+
+            -> This is done through the website: https://formsubmit.co/
+
+            -> I have used the AJAX method for the Email Form (read their documentation for more details)
+
+            -> The message you have created will be sent to my email: hanschdimaano@gmail.com
+
+        -->
+
+
+
+        <!-- PISTEU HEADER -->
+        <header>
+
+            <!-- Pisteu Logo -->
+            <img src="2 - Images/Pisteu_Logo.png">
+
+            <!-- Header Navigation -->
+            <div class="header_navigation">
+
+                <a class="active_Header">Home</a> <!-- Set home as the active header (highlighted) -->
+
+                <!-- Other Navigations -->
+                <a>Artworks</a>
+                <a>Ratings</a>
+                <a>About Us</a>
+            </div>
+        </header>
+
+
+
+        <!--
+
+            NOTE: The Pisteu Slider works with the Slider.js in the JavaScripts folder
+
+        -->
+        
+        <!-- PISTEU SLIDER -->
+        <div class="slider">
+
+            <!-- Slide 1 (Blue BG, Explore Art) --><!-- This is the active slide initially -->
+            <div class="slide slide1 active">
+
+                <!-- Bottom Right Corner BG img -->
+                <img src="2 - Images/slide1_bg.png">
+
+                <!-- Slide Info Container -->
+                <div class="info">
+                    
+                    <h2>EXPLORE ART</h2> <!-- Explore Art Title -->
+                    <p>with Pisteu's ready made designs for your business! </p> <!-- Explore Art Description -->
+                    <a>Learn More</a> <!-- Learn More Button (not linked) -->
+                </div>
+            </div>
+
+            <!-- Slide 2 (Red BG, Edit Videos) -->
+            <div class="slide slide2">
+
+                <!-- Bottom Right Corner BG img -->
+                <img src="2 - Images/slide2_bg.png">
+
+                <!-- Slide Info Container -->
+                <div class="info">
+
+                    <h2>EDIT VIDEOS</h2> <!-- Edit Videos Title -->
+                    <p>with Pisteu's video editing feature on the appilication!</p> <!-- Edit Videos Description -->
+                    <a>Learn More</a> <!-- Learn More Button (not linked) -->
+                </div>
+            </div>
+
+            <!-- Slide 3 (Green BG, Go Digital) -->
+            <div class="slide slide3">
+
+                <!-- Bottom Right Corner BG img -->
+                <img src="2 - Images/slide3_bg.png">
+
+                <!-- Slide Info Container -->
+                <div class="info">
+
+                    <h2>GO DIGITAL</h2> <!-- Go Digital Title -->
+                    <p>with Pisteu's easy and convenient editing application!</p> <!-- Go Digital Description -->
+                    <a>Learn More</a> <!-- Learn More Button (not linked) -->
+                </div>
+            </div>
+
+            <!-- Navigation Buttons Container -->
+            <div class="navigation">
+
+                <!-- Button for Slide 1 --><!-- This is the active button initially (because Slide 1 is active initially as well) -->
+                <div class="btn active"></div>
+                
+                <!-- Button for Slide 2 -->
+                <div class="btn"></div>
+
+                <!-- Button for Slide 3 -->
+                <div class="btn"></div>
+            </div>
+        </div>
+      
+
+
+
+        <!-- PISTEU 3 CORE VALUES-->
+        <div class="core_values">
+
+            <!-- Innovative Container -->
+            <div class="innovative corevalue_1">
+
+                <!-- Core Value Title (with reveal animation left) -->
+                <div class="core_title reveal left">
+
+                    <!-- Core Value Image -->
+                    <img src="2 - Images/innovative.png">
+
+                    <h2>Innovative</h2><!-- Innovative Title Text -->
+                </div>
+
+                <!-- Core Value Description (with reveal animation left) -->
+                <p class="reveal left">Pisteu guarantees to enhance your innovative minds through numerous templates demos of your target designs.</p>
+            </div>
+
+            <!-- Creative Container -->
+            <div class="creative corevalue_2">
+
+                <!-- Core Value Title (with reveal animation left) -->
+                <div class="core_title reveal left">
+
+                    <!-- Core Value Image -->
+                    <img src="2 - Images/creative.png">
+
+                    <h2>Creative</h2><!-- Creative Title Text -->
+                </div>
+
+                <!-- Core Value Description (with reveal animation left) -->
+                <p class="reveal left">Creativity? That's our main goal here! Pisteu offers a large range of designs and templates all ready made for you.</p>
+            </div>
+
+            <!-- Time Saver Container -->
+            <div class="time_saver corevalue_3">
+
+                <!-- Core Value Title (with reveal animation left) -->
+                <div class="core_title reveal left">
+
+                    <!-- Core Value Image -->
+                    <img src="2 - Images/time_saver.png">
+
+                    <h2>Efficient</h2><!-- Efficient Title Text -->
+                </div>
+
+                <!-- Core Value Description (with reveal animation left) -->
+                <p class="reveal left">Designing is not a hassle here in Pisteu because you can create designs here quicker than you expected!</p>
+            </div>
+        </div>
+
+
+        <!-- DESIGN CONTAINER -->
+        <div class="design_container">
+
+            <!-- Design Subheading -->
+            <div class="subheading">
+                <h2><<< DESIGN >>></h2><!-- Design Title Text -->
+            </div>
+
+            <!-- Robot Side Image -->
+            <img src="2 - Images/robot_side.png" class="robot">
+
+
+            <!-- Design Content Container -->
+            <div class="design_content">
+
+                <!-- First Quote Container (with reveal animation up) -->
+                <div class="first_quote reveal up"> 
+
+                    <!-- White Line div -->
+                    <div class="white_line"></div>
+
+                    <!-- Quote Text Container -->
+                    <div class="quote_text">
+                        <h3>"Design is intelligence made visible."</h3><!-- Quote Text -->
+                        <h5>-Alina Wheeler, author</h5><!-- Quote Author -->
+                    </div>
+
+                    <!-- Quote Image GIF -->
+                    <img src="2 - Images/first_quote.gif">
+                </div>
+
+                <!-- Second Quote Container (with reveal animation up) -->
+                <div class="second_quote reveal up"> 
+
+                    <!-- White Line div -->
+                    <div class="white_line"></div>
+
+                    <div class="quote_text">
+                        <h3>"Every great design begins with an even better story."</h3><!-- Quote Text -->
+                        <h5>-Lorinda Mamo, designer</h5><!-- Quote Author -->
+                    </div>
+
+                    <!-- Quote Image GIF -->
+                    <img src="2 - Images/second_quote.gif">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- PISTEU ARTWORKS CONTAINER -->
+        <div class="artworks_container">
+
+            <!-- Artworks Subheading -->
+            <div class="subheading">
+                <h2><<< ARTWORKS >>></h2><!-- Artworks Title Text -->
+            </div>
+
+            <!-- Artworks Container -->
+            <div class="artworks">
+
+                <!-- Artwork 1 -->
+                <div class="artwork1">
+                    
+                    <!-- Blur Div (only visible when artwork div is hovered) -->
+                    <div class="blur"></div>
+
+                    <!-- Caption Container -->
+                    <div class="caption">
+                        <h3>Key Digital</h3><!-- Artwork Title -->
+                        <h5>By: NobleDame</h5><!-- Artist Name -->
+                    </div>
+                </div>
+
+                <!-- Artwork 2 -->
+                <div class="artwork2">
+
+                    <!-- Blur Div (only visible when artwork div is hovered) -->
+                    <div class="blur"></div>
+
+                    <!-- Caption Container -->
+                    <div class="caption">
+                        <h3>Phone Capture</h3><!-- Artwork Title -->
+                        <h5>By: Laurene Boglio</h5><!-- Artist Name -->
+                    </div>
+                </div>
+
+                <!-- Artwork 3 -->
+                <div class="artwork3">
+
+                    <!-- Blur Div (only visible when artwork div is hovered) -->
+                    <div class="blur"></div>
+
+                    <!-- Caption Container -->
+                    <div class="caption">
+                        <h3>Sunny City</h3><!-- Artwork Title -->
+                        <h5>By: Nalmerdin</h5><!-- Artist Name -->
+                    </div>
+                </div>
+
+                <!-- Artwork 4 -->
+                <div class="artwork4">
+
+                    <!-- Blur Div (only visible when artwork div is hovered) -->
+                    <div class="blur"></div>
+
+                    <!-- Caption Container -->
+                    <div class="caption">
+                        <h3>Monochrome Tech</h3><!-- Artwork Title -->
+                        <h5>By: Carl Burton</h5><!-- Artist Name -->
+                    </div>
+                </div>
+
+                <!-- Artwork 5 -->
+                <div class="artwork5">
+
+                    <!-- Blur Div (only visible when artwork div is hovered) -->
+                    <div class="blur"></div>
+
+                    <!-- Caption Container -->
+                    <div class="caption">
+                        <h3>Itz Burning</h3><!-- Artwork Title -->
+                        <h5>By: BlogSpot</h5><!-- Artist Name -->
+                    </div>
+                </div>
+
+                <!-- Artwork 6 -->
+                <div class="artwork6">
+
+                    <!-- Blur Div (only visible when artwork div is hovered) -->
+                    <div class="blur"></div>
+
+                    <!-- Caption Container -->
+                    <div class="caption">
+                        <h3>Schleife</h3><!-- Artwork Title -->
+                        <h5>By: Grojar</h5><!-- Artist Name -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- FEEDBACK CONTAINER -->
+        <div class="feedback_container">
+
+            <!-- Feedback Subheading -->
+            <div class="subheading">
+                <h2><<< FEEDBACK >>></h2><!-- Feedback Title Text -->
+            </div>
+
+            <!-- Melanie Perkins Container -->
+            <div class="melanie_container">
+
+                <!-- Melanie Perkins Image (with reveal animation left) -->
+                <img src="2 - Images/melanie_perkins.png" class="reveal left">
+
+                <!-- Melanie Perkins Name Container -->
+                <div class="name_text">
+                    <h2>Melanie Perkins</h2><!-- Melanie Perkins Name -->
+                    <h5>Founder of Canva</h5><!-- Melanie Perkins Description -->
+                </div>
+            </div>
+
+            <!-- Feedback Text Container (with reveal animation left) -->
+            <div class="feedback_text reveal left">
+
+                <!-- Robot Image -->
+                <img src="2 - Images/robot_front.png">
+
+                <!-- Feedback Text -->
+                <p>I believe Pisteu delivers all the required design elements and templates
+                    that we designers need. And it doesn't stop there; a free editing tool
+                    also offers an enhanced video editor that is easy and efficient. Pisteu
+                    is a new MUST TRY for all professional and newbie designers!</p>
+            </div>
+        </div>
+
+
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <!-- Pisteu Description Container in Footer -->
+            <div class="pisteu_desc">
+
+                <!-- Pisteu Logo -->
+                <img src="2 - Images/Pisteu_Logo.png">
+
+                <!-- Pisteu Description Text 1 -->
+                <p>Pisteu is a multi-functional artwork editor that caters to editing posters,
+                    invitations, presentations, and especially videos. </p>
+
+                <!-- Pisteu Description Text 2 -->
+                <p>Pisteu is free-to-use with a variety of choices ready-made for you! We 
+                    strongly believe that digital is the new designing norm.</p>
+            </div>
+
+            <!-- Pisteu Connect With Us Container in Footer -->
+            <div class="connect_with_us">
+
+                <!-- Connect with us Title -->
+                <h3>CONNECT WITH US</h3>
+
+                <!-- Connect with us Description -->
+                <p>
+                    We would like to hear from you, fellow designers. <br>
+                    Send us an email about anything!
+                </p>
+
+                <!-- Send Email Form (all of the inputs are required) -->
+                <form id="email_form" method="POST" >
+
+                    <!-- Email Input -->
+                    <input type="email" name="Email" placeholder="Email" required/>
+
+                    <!-- Name Input -->
+                    <input type="text" name="Name" placeholder="Name" maxlength="25" class="left_input" required/>
+
+                    <!-- Subject Input -->
+                    <input type="text" name="Subject" placeholder="Subject" maxlength="50" class="right_input" required />
+
+                    <!-- Message Input -->
+                    <textarea name="Message" placeholder="Write your message here." required></textarea>
+
+                    <!-- Submit Button -->
+                    <input type="submit" name="Submit" value="SEND EMAIL" />
+
+                    <!-- Message Sent Text (only visible when the message has been sent) -->
+                    <p id="message_sent_txt">Message Sent!</p>
+                </form>
+            </div>
+        </footer>
+
+
+        <!-- Scripts for Sending Emails -->
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script src="3 - JavaScripts/Send_Email.js"></script>
+
+        <!-- Script for Slider -->
+        <script type="text/javascript" src="3 - JavaScripts/Slider.js"></script>
+
+        <!-- Script for Reveal Animation -->
+        <script type="text/javascript" src="3 - JavaScripts/RevealAnimation.js"></script>
+    </body>
+</html>
